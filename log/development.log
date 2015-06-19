@@ -157,3 +157,61 @@ Processing by TodoListsController#index as HTML
   [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
   Rendered todo_lists/index.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-06-19 11:14:26 +0200
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.0ms)
+  Rendered todo_lists/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-06-19 11:19:06 +0200
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.2ms)
+  Rendered todo_lists/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-06-19 11:33:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-19 11:33:02 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/1" for 127.0.0.1 at 2015-06-19 11:33:06 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-06-19 11:33:07 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-06-19 11:33:08 +0200
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (10.6ms)
+  Rendered todo_lists/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-06-19 11:34:15 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 21.2ms | ActiveRecord: 0.1ms)
