@@ -361,3 +361,542 @@ Migrating to CreateTodoItems (20150701185236)
             FROM sqlite_temp_master
             WHERE name='index_todo_items_on_todo_list_id' AND type='index'
 [0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-02 22:02:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 296ms (Views: 293.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-02 22:02:47 +0200
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-02 22:02:47 +0200
+
+
+Started GET "/todo_lists/1" for 127.0.0.1 at 2015-07-02 22:02:57 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered todo_lists/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 48ms (Views: 37.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:02:59 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/1/edit" for 127.0.0.1 at 2015-07-02 22:03:00 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered todo_lists/_form.html.erb (10.3ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 58ms (Views: 57.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:03:01 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/2/edit" for 127.0.0.1 at 2015-07-02 22:03:03 +0200
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered todo_lists/_form.html.erb (1.0ms)
+  Rendered todo_lists/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:03:05 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:18:18 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined local variable or method `todo_items_index' for #<#<Class:0x000000043bc988>:0x007f27d6cf5120>):
+    16:       <tr id="<%= dom_id(todo_list) %>">
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td><%= link_to 'List_items', todo_items_index %></td>
+    20:         <td><%= link_to 'Show', todo_list %></td>
+    21:         <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
+    22:         <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:19:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904539885320'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904539885320'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (8.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (24.3ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-f55626d2d7e7570f241da165781aa8c79cd72a93d994ce9c980edd065906f08e.css?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/todo_lists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/todo_lists.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-02 22:22:09 +0200
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:22:11 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:22:13 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:22:13 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:22:13 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-07-02 22:43:40 +0200
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (1.1ms)
+  Rendered todo_lists/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for 127.0.0.1 at 2015-07-02 22:43:57 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4cJN/AWer5e9jhbj4F1OHs2W1/lZUFTpPk/nR3/BzzEruW8djfS4xLWncLJsIQJc77qmgnkrC2yYc/a8wtGV7g==", "todo_list"=>{"title"=>"Zakupy", "description"=>"2 Grzyby, Barszcz"}, "commit"=>"Create Todo list"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Zakupy"], ["description", "2 Grzyby, Barszcz"], ["created_at", "2015-07-02 20:43:57.942468"], ["updated_at", "2015-07-02 20:43:57.942468"]]
+  [1m[36m (88.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 91ms (ActiveRecord: 89.0ms)
+
+
+Started GET "/todo_lists/3" for 127.0.0.1 at 2015-07-02 22:43:58 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered todo_lists/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:44:03 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:56:24 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <a href="">List Items</a>
+    21:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    22:         <%= link_to 'Show', todo_list %>
+    23:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    24:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:21:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540495700'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540495700'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:57:15 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined local variable or method `todo_items' for #<#<Class:0x007f27d69d2998>:0x007f27d6bcd770>):
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <a href="">List Items</a>
+    21:         <%= link_to 'List Items', todo_list_todo_items_path(todo_items) %>
+    22:         <%= link_to 'Show', todo_list %>
+    23:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    24:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:21:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904541573780'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904541573780'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.2ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:57:21 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined local variable or method `todo_item' for #<#<Class:0x007f27d69d2998>:0x007f27d510a8c0>):
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <a href="">List Items</a>
+    21:         <%= link_to 'List Items', todo_list_todo_items_path(todo_item) %>
+    22:         <%= link_to 'Show', todo_list %>
+    23:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    24:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:21:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904527515180'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904527515180'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.2ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:20 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.3ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:42 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.2ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.9ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.7ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:43 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.3ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:43 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.4ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:43 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.8ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.5ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:44 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.5ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:44 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.1ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.7ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (15.6ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-07-02 22:58:44 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"todo_items"} missing required keys: [:todo_list_id]):
+    17:         <td><%= todo_list.title %></td>
+    18:         <td><%= todo_list.description %></td>
+    19:         <td>
+    20:         <%= link_to 'List Items', todo_list_todo_items_path %>
+    21:         <%= link_to 'Show', todo_list %>
+    22:         <%= link_to 'Edit', edit_todo_list_path(todo_list) %>
+    23:         <%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are
+  app/views/todo_lists/index.html.erb:20:in `block in _app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+  app/views/todo_lists/index.html.erb:15:in `_app_views_todo_lists_index_html_erb___2913362644561070549_69904540275020'
+
+
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (7.4ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cpt_picard/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (14.9ms)
