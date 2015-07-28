@@ -1,0 +1,47 @@
+@import 'bootstrap';
+@import url('//fonts.googleapis.com/css?family=Helvetica Neue');
+
+$font-family: 									Helvetica Neue,Helvetica,Arial,sans-serif;
+$font-size: 									14px;
+$line-height: 									1.22857;
+$jumbotron-bg: 							     	#AF8F8F;
+@navbar-default-color							#777;
+
+.navbar {
+
+
+  box-shadow:  4px 4px 9px 0px rgba(50, 50, 50, 0.44);
+}
+
+.navbar-right {
+		margin: 30px;
+
+}
+
+.navbar-left {
+		margin: 30px;
+
+}
+
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.jumbotron {
+    border-bottom: 0 none;
+    text-align: center;
+    padding-bottom: 48px;
+    padding-top: 48px;
+    background-color: #eeeeee;
+    color: inherit;
+    margin-bottom: 30px;
+
+}
+
+.header h3 {
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+}

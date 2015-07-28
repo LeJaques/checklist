@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Todolist</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<% flash.each do |type, message| %>
-<div class="alert flash <%= type %>">
-	<%= message %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+<div class="navbar">
+  <div class="nav">
+ 		<h3><%= link_to "Checklist", root_path, class: "navbar-left" %></h3>
+			 <ul>
+				<%= link_to "Todo Lists", todo_lists_path, class: "btn btn-default btn-large navbar-right"%>
+			</ul>
+		<br class="clear" />
+
+	</div>
 </div>
-	<% end %>	
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
