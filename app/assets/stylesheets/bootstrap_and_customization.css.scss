@@ -6,28 +6,41 @@ $font-size: 									14px;
 $line-height: 									1.22857;
 $jumbotron-bg: 							     	#AF8F8F;
 @navbar-default-color							#777;
+$navbar-height:							      	25px;
+
 
 .navbar {
-
 
   box-shadow:  4px 4px 9px 0px rgba(50, 50, 50, 0.44);
 }
 
 .navbar-right {
-		margin: 30px;
-
+		margin: 5px;
 }
-
 .navbar-left {
-		margin: 30px;
+		margin: 5px;
 
 }
 
-
-.container .jumbotron, .container-fluid .jumbotron {
-    padding-left: 60px;
-    padding-right: 60px;
+.nav {
+	
+	text-align: right;
 }
+
+ .container {
+    max-width: 730px;
+  }
+
+
+.container-fluid {
+	max-width: 730px;	
+
+}
+
+.field {
+	text-align: left;
+}
+
 
 .jumbotron {
     border-bottom: 0 none;
@@ -37,6 +50,9 @@ $jumbotron-bg: 							     	#AF8F8F;
     background-color: #eeeeee;
     color: inherit;
     margin-bottom: 30px;
+    padding-left: 160px;
+    padding-right: 160px;
+    box-shadow:  4px 4px 9px 0px rgba(50, 50, 50, 0.44);
 
 }
 
@@ -44,4 +60,24 @@ $jumbotron-bg: 							     	#AF8F8F;
     line-height: 40px;
     margin-bottom: 0;
     margin-top: 0;
+
+}
+
+.logo{
+  font-size: 20px;
+  vertical-align: left; 
+  margin:  -0px;
+  margin-top:  100px;
+}
+
+img {
+    width: 7%;
+}
+
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
 }
