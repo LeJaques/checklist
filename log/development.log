@@ -45472,3 +45472,12 @@ Processing by TodoListsController#index as HTML
   Rendered todo_lists/index.html.erb within layouts/application (1.2ms)
   Rendered layouts/_header.html.erb (0.1ms)
 Completed 200 OK in 78ms (Views: 78.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-08-08 23:51:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 477ms (Views: 468.7ms | ActiveRecord: 0.2ms)
