@@ -53554,3 +53554,42 @@ Processing by TodoItemsController#edit as HTML
   Rendered todo_items/edit.html.erb within layouts/application (1.2ms)
   Rendered layouts/_header.html.erb (0.1ms)
 Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-06 21:45:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 3013ms (Views: 3010.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap_and_customization.self-c36ba2551de81fa05e63e9819048665d54d0035942f954ee9d8308887351f8e2.css?body=1" for 127.0.0.1 at 2015-09-06 21:46:01 +0200
+
+
+Started GET "/assets/scaffolds.self-3356e6574b3a52a3ac1fbf9d09259922cbfee199f1b59c93a63a74dd5945c098.css?body=1" for 127.0.0.1 at 2015-09-06 21:46:01 +0200
+
+
+Started GET "/todo_lists/new" for 127.0.0.1 at 2015-09-06 21:46:06 +0200
+Processing by TodoListsController#new as HTML
+  Rendered todo_lists/_form.html.erb (36.7ms)
+  Rendered todo_lists/new.html.erb within layouts/application (37.3ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-09-06 21:46:08 +0200
+Processing by TodoListsController#index as HTML
+  [1m[36mTodoList Load (0.2ms)[0m  [1mSELECT "todo_lists".* FROM "todo_lists"[0m
+  Rendered todo_lists/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 89.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists" for 127.0.0.1 at 2015-09-06 21:46:12 +0200
+Processing by TodoListsController#index as HTML
+  [1m[35mTodoList Load (0.1ms)[0m  SELECT "todo_lists".* FROM "todo_lists"
+  Rendered todo_lists/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 73.4ms | ActiveRecord: 0.1ms)
