@@ -37,6 +37,20 @@ $navbar-height:							      	25px;
 
 }
 
+.container ul {
+    padding: 0; /* remove default padding and all margins! */
+    margin: 0;
+    list-style-type: none; /* remove the • */
+}
+
+.container ul li {
+    vertical-align: center; 
+    width: 65px;
+    height: 30px;
+    background-color: none;
+    float: left;
+}
+
 .field {
 	text-align: left;
 }

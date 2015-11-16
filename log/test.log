@@ -17649,3 +17649,783 @@ Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms)
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "Hello"], ["created_at", "2015-09-06 21:43:20.153128"], ["updated_at", "2015-09-06 21:43:20.153128"]]
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-07 21:24:56.606666"], ["updated_at", "2015-09-07 21:24:56.606666"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-07 21:26:31.485145"], ["updated_at", "2015-09-07 21:26:31.485145"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-07 21:26:48.276476"], ["updated_at", "2015-09-07 21:26:48.276476"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-07 21:27:35.156243"], ["updated_at", "2015-09-07 21:27:35.156243"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-07 21:26:35.161994"], ["todo_list_id", 1], ["created_at", "2015-09-07 21:27:35.165696"], ["updated_at", "2015-09-07 21:27:35.165696"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:10:06.191297"], ["updated_at", "2015-09-08 21:10:06.191297"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:09:06.200406"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:10:06.204088"], ["updated_at", "2015-09-08 21:10:06.204088"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:11:57.173785"], ["updated_at", "2015-09-08 21:11:57.173785"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:10:57.178803"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:11:57.182368"], ["updated_at", "2015-09-08 21:11:57.182368"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:12:43.343404"], ["updated_at", "2015-09-08 21:12:43.343404"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:11:43.348572"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:12:43.352093"], ["updated_at", "2015-09-08 21:12:43.352093"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:13:16.796761"], ["updated_at", "2015-09-08 21:13:16.796761"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:12:16.801846"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:13:16.805223"], ["updated_at", "2015-09-08 21:13:16.805223"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:14:24.777136"], ["updated_at", "2015-09-08 21:14:24.777136"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:13:24.782583"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:14:24.786621"], ["updated_at", "2015-09-08 21:14:24.786621"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:14:31.746168"], ["updated_at", "2015-09-08 21:14:31.746168"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:13:31.751458"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:14:31.755021"], ["updated_at", "2015-09-08 21:14:31.755021"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:18:32.065764"], ["updated_at", "2015-09-08 21:18:32.065764"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:17:32.070788"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:18:32.074368"], ["updated_at", "2015-09-08 21:18:32.074368"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:20:38.925478"], ["updated_at", "2015-09-08 21:20:38.925478"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:19:38.930704"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:20:38.934205"], ["updated_at", "2015-09-08 21:20:38.934205"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:22:16.660953"], ["updated_at", "2015-09-08 21:22:16.660953"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:21:16.665934"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:22:16.669445"], ["updated_at", "2015-09-08 21:22:16.669445"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:26:21.469439"], ["updated_at", "2015-09-08 21:26:21.469439"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:25:21.474441"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:26:21.477925"], ["updated_at", "2015-09-08 21:26:21.477925"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:27:23.755022"], ["updated_at", "2015-09-08 21:27:23.755022"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:26:23.760191"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:27:23.763670"], ["updated_at", "2015-09-08 21:27:23.763670"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:27:39.614950"], ["updated_at", "2015-09-08 21:27:39.614950"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:26:39.619863"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:27:39.623256"], ["updated_at", "2015-09-08 21:27:39.623256"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:31:04.078392"], ["updated_at", "2015-09-08 21:31:04.078392"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:30:04.083367"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:31:04.086966"], ["updated_at", "2015-09-08 21:31:04.086966"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:32:44.909298"], ["updated_at", "2015-09-08 21:32:44.909298"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:31:44.914445"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:32:44.918071"], ["updated_at", "2015-09-08 21:32:44.918071"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:39:42.354279"], ["updated_at", "2015-09-08 21:39:42.354279"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:38:42.359127"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:39:42.362446"], ["updated_at", "2015-09-08 21:39:42.362446"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:45:28.460864"], ["updated_at", "2015-09-08 21:45:28.460864"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:45:28.469240"], ["updated_at", "2015-09-08 21:45:28.469240"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:45:28.471078"], ["updated_at", "2015-09-08 21:45:28.471078"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:44:28.471784"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:45:28.472284"], ["updated_at", "2015-09-08 21:45:28.472284"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:45:53.602618"], ["updated_at", "2015-09-08 21:45:53.602618"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:45:53.611089"], ["updated_at", "2015-09-08 21:45:53.611089"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:45:53.612896"], ["updated_at", "2015-09-08 21:45:53.612896"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:44:53.613562"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:45:53.614021"], ["updated_at", "2015-09-08 21:45:53.614021"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:46:30.382991"], ["updated_at", "2015-09-08 21:46:30.382991"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 21:45:30.388031"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:46:30.391505"], ["updated_at", "2015-09-08 21:46:30.391505"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 21:46:30.394163"], ["updated_at", "2015-09-08 21:46:30.394163"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 21:46:30.395274"], ["updated_at", "2015-09-08 21:46:30.395274"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:34:14.353841"], ["updated_at", "2015-09-08 23:34:14.353841"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 23:33:14.359155"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:34:14.362759"], ["updated_at", "2015-09-08 23:34:14.362759"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:34:14.365495"], ["updated_at", "2015-09-08 23:34:14.365495"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:34:14.366683"], ["updated_at", "2015-09-08 23:34:14.366683"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:38:53.839986"], ["updated_at", "2015-09-08 23:38:53.839986"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 23:37:53.844903"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:38:53.848355"], ["updated_at", "2015-09-08 23:38:53.848355"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:38:53.850819"], ["updated_at", "2015-09-08 23:38:53.850819"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:38:53.851903"], ["updated_at", "2015-09-08 23:38:53.851903"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:40:35.380390"], ["updated_at", "2015-09-08 23:40:35.380390"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-08 23:39:35.385665"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:40:35.389409"], ["updated_at", "2015-09-08 23:40:35.389409"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:40:35.392010"], ["updated_at", "2015-09-08 23:40:35.392010"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:40:35.393191"], ["updated_at", "2015-09-08 23:40:35.393191"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:43:33.712985"], ["updated_at", "2015-09-08 23:43:33.712985"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:43:33.721261"], ["updated_at", "2015-09-08 23:43:33.721261"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:43:33.723639"], ["updated_at", "2015-09-08 23:43:33.723639"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-08 23:42:33.724321"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:43:33.724768"], ["updated_at", "2015-09-08 23:43:33.724768"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:43:44.575621"], ["updated_at", "2015-09-08 23:43:44.575621"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:43:44.583820"], ["updated_at", "2015-09-08 23:43:44.583820"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:43:44.586213"], ["updated_at", "2015-09-08 23:43:44.586213"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-08 23:42:44.586857"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:43:44.587302"], ["updated_at", "2015-09-08 23:43:44.587302"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:43:52.214930"], ["updated_at", "2015-09-08 23:43:52.214930"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:43:52.223455"], ["updated_at", "2015-09-08 23:43:52.223455"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:43:52.225900"], ["updated_at", "2015-09-08 23:43:52.225900"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-08 23:42:52.226553"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:43:52.226993"], ["updated_at", "2015-09-08 23:43:52.226993"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:53:08.860851"], ["updated_at", "2015-09-08 23:53:08.860851"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:53:08.869625"], ["updated_at", "2015-09-08 23:53:08.869625"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-08 23:53:08.872261"], ["updated_at", "2015-09-08 23:53:08.872261"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-08 23:52:08.873031"], ["todo_list_id", 1], ["created_at", "2015-09-08 23:53:08.873577"], ["updated_at", "2015-09-08 23:53:08.873577"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:15.517320"], ["updated_at", "2015-09-10 13:32:15.517320"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 13:31:15.523616"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:15.526951"], ["updated_at", "2015-09-10 13:32:15.526951"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:15.529956"], ["updated_at", "2015-09-10 13:32:15.529956"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:15.531245"], ["updated_at", "2015-09-10 13:32:15.531245"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:30.679084"], ["updated_at", "2015-09-10 13:32:30.679084"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:30.687848"], ["updated_at", "2015-09-10 13:32:30.687848"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:30.690176"], ["updated_at", "2015-09-10 13:32:30.690176"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 13:31:30.690823"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:30.691285"], ["updated_at", "2015-09-10 13:32:30.691285"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:47.607382"], ["updated_at", "2015-09-10 13:32:47.607382"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 13:31:47.612775"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:47.616453"], ["updated_at", "2015-09-10 13:32:47.616453"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:47.619332"], ["updated_at", "2015-09-10 13:32:47.619332"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:47.620554"], ["updated_at", "2015-09-10 13:32:47.620554"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:53.661232"], ["updated_at", "2015-09-10 13:32:53.661232"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 13:31:53.667260"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:53.670674"], ["updated_at", "2015-09-10 13:32:53.670674"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:32:53.673230"], ["updated_at", "2015-09-10 13:32:53.673230"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:32:53.674377"], ["updated_at", "2015-09-10 13:32:53.674377"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:36:55.830851"], ["updated_at", "2015-09-10 13:36:55.830851"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:36:55.838966"], ["updated_at", "2015-09-10 13:36:55.838966"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 13:36:55.841276"], ["updated_at", "2015-09-10 13:36:55.841276"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 13:35:55.841941"], ["todo_list_id", 1], ["created_at", "2015-09-10 13:36:55.842384"], ["updated_at", "2015-09-10 13:36:55.842384"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:06:47.635788"], ["updated_at", "2015-09-10 14:06:47.635788"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:06:47.644319"], ["updated_at", "2015-09-10 14:06:47.644319"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:06:47.646708"], ["updated_at", "2015-09-10 14:06:47.646708"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 14:05:47.647359"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:06:47.647810"], ["updated_at", "2015-09-10 14:06:47.647810"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:06:47.649701"], ["updated_at", "2015-09-10 14:06:47.649701"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:06:47.650740"], ["updated_at", "2015-09-10 14:06:47.650740"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL[0m  [["todo_list_id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:06:47.676186"], ["updated_at", "2015-09-10 14:06:47.676186"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 14:05:47.677029"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:06:47.677551"], ["updated_at", "2015-09-10 14:06:47.677551"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL  [["todo_list_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:14.651652"], ["updated_at", "2015-09-10 14:07:14.651652"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 14:06:14.658207"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:14.661658"], ["updated_at", "2015-09-10 14:07:14.661658"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:14.664307"], ["updated_at", "2015-09-10 14:07:14.664307"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:14.665470"], ["updated_at", "2015-09-10 14:07:14.665470"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:22.410632"], ["updated_at", "2015-09-10 14:07:22.410632"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:22.419610"], ["updated_at", "2015-09-10 14:07:22.419610"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:22.422381"], ["updated_at", "2015-09-10 14:07:22.422381"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 14:06:22.423140"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:22.423634"], ["updated_at", "2015-09-10 14:07:22.423634"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:58.280447"], ["updated_at", "2015-09-10 14:07:58.280447"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 14:06:58.285894"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:58.289815"], ["updated_at", "2015-09-10 14:07:58.289815"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL[0m  [["todo_list_id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:58.294410"], ["updated_at", "2015-09-10 14:07:58.294410"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:58.295652"], ["updated_at", "2015-09-10 14:07:58.295652"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL  [["todo_list_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:58.297667"], ["updated_at", "2015-09-10 14:07:58.297667"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 14:06:58.298395"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:58.298926"], ["updated_at", "2015-09-10 14:07:58.298926"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:07:58.301272"], ["updated_at", "2015-09-10 14:07:58.301272"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:07:58.302914"], ["updated_at", "2015-09-10 14:07:58.302914"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:08:03.307486"], ["updated_at", "2015-09-10 14:08:03.307486"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 14:07:03.313208"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:08:03.316913"], ["updated_at", "2015-09-10 14:08:03.316913"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:08:03.319819"], ["updated_at", "2015-09-10 14:08:03.319819"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:08:03.321073"], ["updated_at", "2015-09-10 14:08:03.321073"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:08:03.323303"], ["updated_at", "2015-09-10 14:08:03.323303"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:08:03.324473"], ["updated_at", "2015-09-10 14:08:03.324473"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL[0m  [["todo_list_id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:08:03.328581"], ["updated_at", "2015-09-10 14:08:03.328581"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 14:07:03.329379"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:08:03.329922"], ["updated_at", "2015-09-10 14:08:03.329922"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL  [["todo_list_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:19:57.350804"], ["updated_at", "2015-09-10 14:19:57.350804"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:19:57.363217"], ["updated_at", "2015-09-10 14:19:57.363217"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL[0m  [["todo_list_id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:19:57.367585"], ["updated_at", "2015-09-10 14:19:57.367585"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "Eggs"], ["completed_at", "2015-09-10 14:18:57.368414"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:19:57.368953"], ["updated_at", "2015-09-10 14:19:57.368953"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND "todo_items"."completed_at" IS NULL  [["todo_list_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:19:57.371250"], ["updated_at", "2015-09-10 14:19:57.371250"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_items" ("content", "completed_at", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Eggs"], ["completed_at", "2015-09-10 14:18:57.372248"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:19:57.372830"], ["updated_at", "2015-09-10 14:19:57.372830"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)[0m  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Groceries"], ["description", "Grocery list"], ["created_at", "2015-09-10 14:19:57.375150"], ["updated_at", "2015-09-10 14:19:57.375150"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Eggs"], ["todo_list_id", 1], ["created_at", "2015-09-10 14:19:57.376476"], ["updated_at", "2015-09-10 14:19:57.376476"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)  [["todo_list_id", 1]]
+SQLite3::SQLException: near "at": syntax error: SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? AND (completed at is not null)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
